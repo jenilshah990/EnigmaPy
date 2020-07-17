@@ -1,10 +1,10 @@
 #ENIGMA_I Rotor Configurations
-ROTOR_I = [5, 11, 13, 6, 12, 7, 4, 17, 22, 26, 14, 20, 15, 23, 25, 8, 24, 21, 19, 16, 1, 9, 2, 18, 3, 10]
-ROTOR_II = [1, 10, 4, 11, 19, 9, 18, 21, 24, 2, 12, 8, 23, 20, 13, 3, 17, 7, 26, 14, 16, 25, 6, 22, 15, 5]
-ROTOR_III = [2, 4, 6, 8, 10, 12, 3, 16, 18, 20, 24, 22, 26, 14, 25, 5, 9, 23, 7, 1, 11, 13, 21, 19, 17, 15]
+ROTOR_I = [4, 10, 12, 5, 11, 6, 3, 16, 21, 25, 13, 19, 14, 22, 24, 7, 23, 20, 18, 15, 0, 8, 1, 17, 2, 9]
+ROTOR_II = [0, 9, 3, 10, 18, 8, 17, 20, 23, 1, 11, 7, 22, 19, 12, 2, 16, 6, 25, 13, 15, 24, 5, 21, 14, 4]
+ROTOR_III = [1, 3, 5, 7, 9, 11, 2, 15, 17, 19, 23, 21, 25, 13, 24, 4, 8, 22, 6, 0, 10, 12, 20, 18, 16, 14]
 
 class rotor(object):
-    def __init__(self, shift, ring, notch, pos, wiring=None):
+    def __init__(self, shift, ring, notch, pos, next = None, wiring=None):
         if wiring == 'ROTOR_I':
             self.wiring = ROTOR_I
         elif wiring == 'ROTOR_II':
@@ -13,6 +13,7 @@ class rotor(object):
             self.wiring = ROTOR_III
         else:
             self.wiring = wiring
+        self.next = next
         self.pos = pos
         self.window = ord(ring) - ord('A')
         self.shift = shift
@@ -22,24 +23,26 @@ class rotor(object):
     def encrypt(self, input):
         #Give input at Outer Ring
         if self.pos == 1:
-            outer_ring = (self.window + input) % 26
+            outer_ring = (self.window + input + 1) % 26
 
-        #Represents rotation of the Rotor
-        self.window += 1
-        self.rotations = self.rotations+1
-
+        else:
+            outer_ring = input
 
         #Getting the inner ring letter through the wiring
-        if self.pos == 1:
-            inner_ring = self.wiring[outer_ring]
-        else:
-            inner_ring = self.wiring[input]
+        inner_ring = self.wiring[outer_ring]
 
-        #getting the final output from the inner ring
-        output = (inner_ring + self.shift - self.rotations)%26
-
-        #Hitting the notch
-        if self.window == self.notch and self.pos != 3:
+        # Hitting the notch
+        if self.window == self.notch and self.next != None:
             self.shift = self.shift + 1
+            self.next.window = self.next.window + 1
+            self.next.rotations = self.next.rotations + 1
+            self.next.shift = self.next.shift - 1
+
+        if self.pos == 1:
+            self.window += 1
+            self.rotations = self.rotations + 1
+
+        # getting the final output from the inner ring
+        output = (inner_ring + self.shift - self.rotations) % 26
         return output
 

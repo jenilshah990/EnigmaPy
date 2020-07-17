@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
 class plugboard:
     # Wires the plugboard from the settings provided in wiring_pairs
     def __init__(self, wiring_pairs=None):

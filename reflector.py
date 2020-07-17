@@ -29,6 +29,9 @@ class reflector(object ):
             self.wiring = Reflector_C
         else:
             #if keyset not given ie Custom key case
+            #Check length = 26
+            assert (len(inputConfig) == 26) , 'Error: Custom Reflector Configuration string length should be 26'
+
             self.getCustomKey(inputConfig)
 
     def getCustomKey(self, s):
@@ -55,3 +58,6 @@ class reflector(object ):
         """
         assert (R_in>=0 and R_in<26) , 'Error: Rin should between 0 and 26 only'
         return self.wiring[R_in]
+
+
+

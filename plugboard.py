@@ -4,7 +4,7 @@
 class plugboard:
     # Wires the plugboard from the settings provided in wiring_pairs
     def __init__(self, wiring_pairs=None):
-        # Creating a default 1:1 wiring (The index represents the alphabet while
+        # Creating a default 1:1 wiring
         self.wiring = list(range(26))
         if not wiring_pairs:
             return

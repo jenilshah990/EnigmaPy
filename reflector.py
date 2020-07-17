@@ -11,7 +11,7 @@ Reflector_C = [5, 21, 15, 9, 8, 0, 14, 24, 4, 3, 17, 25, 23, 22, 6, 2, 19, 10, 2
 
 class reflector(object ):
     
-    def __init__(self , keyset = 'REFLECTOR_A'):
+    def __init__(self , inputConfig = 'REFLECTOR_A'):
         """
         Parameters
         ----------
@@ -19,19 +19,19 @@ class reflector(object ):
 
         """
         # for setA = EJMZALYXVBWFCRQUONTSPIKHGD    
-        if keyset.upper() == 'REFLECTOR_A':
+        if inputConfig.upper() == 'REFLECTOR_A':
             self.wiring = Reflector_A
         # for setB = YRUHQSLDPXNGOKMIEBFZCWVJAT
-        elif keyset.upper() == 'REFLECTOR_B':
+        elif inputConfig.upper() == 'REFLECTOR_B':
             self.wiring = Reflector_B
         #for setC = FVPJIAOYEDRZXWGCTKUQSBNMHL
-        elif keyset.upper() == 'REFLECTOR_C':
+        elif inputConfig.upper() == 'REFLECTOR_C':
             self.wiring = Reflector_C
         else:
             #if keyset not given ie Custom key case
-            self.getCustomKey(keyset)
+            self.getCustomKey(inputConfig)
 
-    def getCustomKey(s):
+    def getCustomKey(self, s):
         """
         Parameters
         ----------
@@ -43,7 +43,7 @@ class reflector(object ):
         rk = []
         for ele in s:
             rk.append(ord(ele.upper()) - 65)
-        return rk
+        self.wiring = rk
 
     def encrypt(self,R_in):
         """

@@ -5,26 +5,32 @@ ROTOR_III = [1, 3, 5, 7, 9, 11, 2, 15, 17, 19, 23, 21, 25, 13, 24, 4, 8, 22, 6, 
 
 class rotor():
     def __init__(self, key, notch):
-        self.off1 = ord(key[0].upper())-ord('A')
-        self.off2 = (ord(key[1].upper())-ord(key[0].upper()))%26
-        self.off3 = (ord(key[2].upper())-ord(key[1].upper()))%26
-        self.off4 = (ord('A')-ord(key[2].upper()))%26
-        self.window1 = ord(key[0].upper())-ord('A')
-        self.window2 = ord(key[1].upper()) - ord('A')
-        self.notch1 = ord(notch[0].upper())-ord('A')
-        self.notch2 = ord(notch[1].upper())-ord('A')
+        #Offset Calculations
+        self.off1 = ord(key[0].upper())-ord('A') #off1 = ring setting 1
+        self.off2 = (ord(key[1].upper())-ord(key[0].upper()))%26 #off2 = ring setting 2 - ring setting 1
+        self.off3 = (ord(key[2].upper())-ord(key[1].upper()))%26 #off3 = ring setting 3 - ring setting 2
+        self.off4 = (ord('A')-ord(key[2].upper()))%26 #off4 = ring setting 3
+
+        #Window & Notch Calculations
+        self.window1 = ord(key[0].upper())-ord('A') #Index of the Letter that appers on the Window of ROTORI
+        self.window2 = ord(key[1].upper()) - ord('A') #Index of the Letter that appers on the Window of ROTORI
+        self.notch1 = ord(notch[0].upper())-ord('A') #Index of Notch of Rotor I
+        self.notch2 = ord(notch[1].upper())-ord('A') #Index of Notch of Rotor II
 
     def notch(self):
+        #Notch II hits after Notch I
         if self.window2 == self.notch2:
             self.off2 = (self.off2+1)%26
             self.off4 = (self.off4-1)%26
             self.window2 = (self.window2+1)%26
 
+        #Only Notch I hits
         #window1 == off1 - 1 here
         elif self.window1 == self.notch1:
             self.off2 = (self.off2+1)%26
             self.off3 = (self.off3-1)%26
 
+    #Encrpytion while going forward
     def encrypt_forward(self, input):
         #Rotation
         self.off1 = (self.off1+1)%26
@@ -41,6 +47,7 @@ class rotor():
         self.window1 = (self.window1 + 1)%26
         return output
 
+    #Encryption after returning from Reflector
     def encrpyt_backward(self, input):
         input = (input - self.off4)%26
         input = ROTOR_III.index(input)

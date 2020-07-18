@@ -29,7 +29,7 @@ class reflector(object):
             #assert (len(wiring_pairs) == 26) , 'Error: Custom Reflector Configuration string length should be 26'
             #Check if no letters repeat
             #assert(len(set(wiring_paris)) == len(wiring_paris)), 'Error: Custom Reflector Configuration should not have repeating characters'
-            self.wiring = plugboard.__init__(wiring_pairs)
+            
 
     def encrypt(self,R_in):
         """

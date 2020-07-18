@@ -12,7 +12,6 @@ class reflector(object):
         Parameters
         ----------
         keyset : is a string of set choosen for encryption.The default is None.
-
         """
         # for setA = EJMZALYXVBWFCRQUONTSPIKHGD    
         if wiring_pairs.upper() == 'REFLECTOR_A':

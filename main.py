@@ -9,7 +9,7 @@ r = x.plugboard_encrypt(1)
 
 #Helper: Creating Rotor wirings list from strings
 wiring = list(range(26))
-s = list('DMTWSILRUYQNKFEJCAZBPGXOHV')
+s = list('UQNTLSZFMREHDPXKIBVYGJCWOA')
 i = 0
 for c in s:
     letter_index = ord(c)-ord('A')

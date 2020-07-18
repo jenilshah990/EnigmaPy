@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-class plugboard:
+class plugboard():
     # Wires the plugboard from the settings provided in wiring_pairs
     def __init__(self, wiring_pairs=None):
         # Creating a default 1:1 wiring
@@ -18,5 +18,4 @@ class plugboard:
 
     # The letter is encrypted according to the plugboard wiring
     def plugboard_encrypt(self, letter):
-        letter_index = ord(letter.upper()) - ord('A')
-        return self.wiring[letter_index]
+        return self.wiring[letter]

@@ -24,7 +24,6 @@ class rotor(object):
         #Give input at Outer Ring
         if self.pos == 1:
             outer_ring = (self.window + input + 1) % 26
-
         else:
             outer_ring = input
 
@@ -36,7 +35,7 @@ class rotor(object):
             self.shift = self.shift + 1
             self.next.window = self.next.window + 1
             self.next.rotations = self.next.rotations + 1
-            self.next.shift = self.next.shift - 1
+            #self.next.shift = self.next.shift - 1
 
         if self.pos == 1:
             self.window += 1

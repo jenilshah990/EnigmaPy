@@ -1,51 +1,31 @@
-import plugboard
-import rotor
-import rotor
-import keyboard
+from Enigma import Enigma
+#Input PlugBoard
+plugboard = input('Input Plugboard Settings: ')
+rotor1 = input('Input Rotor 1: ')
+rotor2 = input('Input Rotor 2: ')
+rotor3 = input('Input Rotor 3: ')
 
-#PlugBoard testing
-x = plugboard.plugboard('AB CD EF GH IJ',0)
-r = x.plugboard_encrypt(1)
-
-#Helper: Creating Rotor wirings list from strings
-wiring = list(range(26))
-s = list('UQNTLSZFMREHDPXKIBVYGJCWOA')
-i = 0
-for c in s:
-    letter_index = ord(c)-ord('A')
-    wiring[i]=letter_index
-    i=i+1
-print(wiring)
-#Enigma Class: Rotor Testing
-class Enigma:
-    def __init__(self, ring_settings, notch_settings):
-        shift1 = (ord(ring_settings[1]) - ord(ring_settings[0]))%26
-        shift2 = (ord(ring_settings[2]) - ord(ring_settings[1]))%26
-        shift3 = (ord('A') - ord(ring_settings[2]))%26
-        self.rotor3 = rotor.rotor(shift3, ring_settings[2], notch_settings[2], 3, None, 'ROTOR_III')
-        self.rotor2 = rotor.rotor(shift2, ring_settings[1], notch_settings[1], 2, self.rotor3, 'ROTOR_II')
-        self.rotor1 = rotor.rotor(shift1, ring_settings[0], notch_settings[0], 1, self.rotor2, 'ROTOR_I')
-        rotors = [0, self.rotor1, self.rotor2,self.rotor3]
-
-    def encrypt(self, input):
-        out1 = self.rotor1.encrypt(input)
-        print(out1)
-        out2 = self.rotor2.encrypt(out1)
-        print(out2)
-        output = self.rotor3.encrypt(out2)
-        print(output)
-
-A = Enigma('QDC', 'QEJ')
-A.encrypt(0)
-
-#Rotor Testing
-R = rotor.rotor('QED', 'QE')
-print(R.encrypt_forward(1))
-print(R.encrpyt_backward(16))
-
-#Keyboard Input
 while True:
-    pressedKey = keyboard.read_key()
-    print(A.encrypt(pressedKey))
-    break
+    notch_setting = input('Input Notch Settings: ')
+    if len(notch_setting) != 3:
+        print('Enter three notch values in the form ABC')
+    else:
+        break
+
+while True:
+    ring_setting = input('Input Ring Settings: ')
+    if len(ring_setting) != 3:
+        print('Enter three ring values in the form ABC')
+    else:
+        break
+
+reflector = input('Input Relfector Settings: ')
+
+machine = Enigma(plugboard,reflector, rotor1, rotor2, rotor3, ring_setting, notch_setting)
+while True:
+        print(machine.encrypt(input('Enter Plaintext: ')))
+        if input('Cipher Other Text? Enter: yes/no').upper() == 'NO':
+            break
+        else:
+            continue
 

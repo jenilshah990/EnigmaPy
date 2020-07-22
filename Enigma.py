@@ -1,5 +1,5 @@
 from plugboard import plugboard
-from rotor1 import rotor
+from rotor import rotor
 
 class Enigma():
     # Create a PlugBoard, Rotors & Reflector

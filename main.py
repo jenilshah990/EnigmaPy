@@ -1,6 +1,6 @@
 import plugboard
 import rotor
-import rotor1
+import rotor
 import keyboard
 
 #PlugBoard testing
@@ -39,7 +39,7 @@ A = Enigma('QDC', 'QEJ')
 A.encrypt(0)
 
 #Rotor Testing
-R = rotor1.rotor('QED', 'QE')
+R = rotor.rotor('QED', 'QE')
 print(R.encrypt_forward(1))
 print(R.encrpyt_backward(16))
 

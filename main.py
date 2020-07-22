@@ -1,5 +1,6 @@
 from Enigma import Enigma
-#Input PlugBoard
+
+# Input PlugBoard
 plugboard = input('Input Plugboard Settings: ')
 rotor1 = input('Input Rotor 1: ')
 rotor2 = input('Input Rotor 2: ')
@@ -21,11 +22,10 @@ while True:
 
 reflector = input('Input Relfector Settings: ')
 
-machine = Enigma(plugboard,reflector, rotor1, rotor2, rotor3, ring_setting, notch_setting)
+machine = Enigma(plugboard, reflector, rotor1, rotor2, rotor3, ring_setting, notch_setting)
 while True:
-        print(machine.encrypt(input('Enter Plaintext: ')))
-        if input('Cipher Other Text? Enter: yes/no').upper() == 'NO':
-            break
-        else:
-            continue
-
+    print(machine.cipher(input('Enter Plaintext: ')))
+    if input('Cipher Other Text? Enter: yes/no').upper() == 'NO':
+        break
+    else:
+        continue

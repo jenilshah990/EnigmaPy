@@ -4,7 +4,7 @@ from rotor import rotor
 class Enigma():
     # Create a PlugBoard, Rotors & Reflector
     def __init__(self, plugboard_settings, reflector_settings, rotor1, rotor2, rotor3, ring_settings, notch_settings):
-        self.p_board = plugboard(plugboard_settings, 0)
+        self.plug_board = plugboard(plugboard_settings, 0)
         self.rotor = rotor(ring_settings, notch_settings, rotor1, rotor2, rotor3)
         self.reflector = plugboard(reflector_settings, 1)
 

@@ -8,21 +8,21 @@ class plugboard():
     # Wires the plugboard from the settings provided in wiring_pairs
     def __init__(self, wiring_pairs,p):
         # Creating a default 1:1 wiring
-            # for setA = EJMZALYXVBWFCRQUONTSPIKHGD         
+        # for setA = EJMZALYXVBWFCRQUONTSPIKHGD
         if wiring_pairs.upper() == 'REFLECTOR_A':
             self.wiring = Reflector_A
             
-           # for setB = YRUHQSLDPXNGOKMIEBFZCWVJAT
+        # for setB = YRUHQSLDPXNGOKMIEBFZCWVJAT
         elif wiring_pairs.upper() == 'REFLECTOR_B':
             self.wiring = Reflector_B
             
-            #for setC = FVPJIAOYEDRZXWGCTKUQSBNMHL
+        #for setC = FVPJIAOYEDRZXWGCTKUQSBNMHL
         elif wiring_pairs.upper() == 'REFLECTOR_C':
             self.wiring = Reflector_C
             
         else:
             assert (p==0 or p==1) , 'Error choose either plugborad or reflector'
-            assert(len(set(''.join(wiring_pairs.split()))) == len(''.join(wiring_pairs.split()))), 'Custom Reflector Configuration should not have repeating characters'
+            assert(len(set(''.join(wiring_pairs.split()))) == len(''.join(wiring_pairs.split()))), 'Custom Configuration should not have repeating characters'
             if p == 0:
                 assert len(wiring_pairs.split())<=13 , 'Add only 13 or less pairs in form: AB CD EF ....YZ'
             else :

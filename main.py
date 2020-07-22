@@ -1,10 +1,10 @@
 import plugboard
 import rotor
-import reflector
 import rotor1
+import keyboard
 
 #PlugBoard testing
-x = plugboard.plugboard('AB CD EF GH IJ')
+x = plugboard.plugboard('AB CD EF GH IJ',0)
 r = x.plugboard_encrypt(1)
 
 #Helper: Creating Rotor wirings list from strings
@@ -38,12 +38,14 @@ class Enigma:
 A = Enigma('QDC', 'QEJ')
 A.encrypt(0)
 
-#Reflector Testing
-R = reflector.reflector('AB CD EF GH IJ')
-print(R.encrypt(0))
-
 #Rotor Testing
 R = rotor1.rotor('QED', 'QE')
 print(R.encrypt_forward(1))
 print(R.encrpyt_backward(16))
+
+#Keyboard Input
+while True:
+    pressedKey = keyboard.read_key()
+    print(A.encrypt(pressedKey))
+    break
 

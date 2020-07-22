@@ -1,16 +1,17 @@
-#ENIGMA_I Rotor Wi
+#ENIGMA_I Rotor Wiring
 ROTOR_I = [4, 10, 12, 5, 11, 6, 3, 16, 21, 25, 13, 19, 14, 22, 24, 7, 23, 20, 18, 15, 0, 8, 1, 17, 2, 9]
 ROTOR_II = [0, 9, 3, 10, 18, 8, 17, 20, 23, 1, 11, 7, 22, 19, 12, 2, 16, 6, 25, 13, 15, 24, 5, 21, 14, 4]
 ROTOR_III = [1, 3, 5, 7, 9, 11, 2, 15, 17, 19, 23, 21, 25, 13, 24, 4, 8, 22, 6, 0, 10, 12, 20, 18, 16, 14]
 
-#ENIGMA IC Rotors Wis
+#ENIGMA_IC Rotors Wiring
 ROTOR_IC = [3, 12, 19, 22, 18, 8, 11, 17, 20, 24, 16, 13, 10, 5, 4, 9, 2, 0, 25, 1, 15, 6, 23, 14, 7, 21]
 ROTOR_IIC = [7, 16, 25, 6, 15, 9, 19, 12, 14, 1, 11, 13, 2, 8, 5, 3, 24, 0, 22, 21, 4, 20, 18, 17, 10, 23]
 ROTOR_IIIC = [20, 16, 13, 19, 11, 18, 25, 5, 12, 17, 4, 7, 3, 15, 23, 10, 8, 1, 21, 24, 6, 9, 2, 22, 14, 0]
 
-dict = {'ROTOR_I': ROTOR_I, 'ROTOR_II':ROTOR_II, 'ROTOR_III':ROTOR_III}
+dict = {'ROTOR_I': ROTOR_I, 'ROTOR_II':ROTOR_II, 'ROTOR_III':ROTOR_III,
+        'ROTOR_IC':ROTOR_IC, 'ROTOR_IIC':ROTOR_IIC, 'ROTOR_IIIC':ROTOR_IIIC}
 
-class rotor():
+class rotor(object):
     def __init__(self, ring, notch, rotor1, rotor2, rotor3):
         if rotor1 in dict:
             self.rotor1 = dict[rotor1]

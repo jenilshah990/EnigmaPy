@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/https:/github.com/jenilshah990/Enigma-Py.git" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/https:/github.com/jenilshah990/EnigmaPy.git" vcs="Git" />
   </component>
 </project>

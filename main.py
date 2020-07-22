@@ -25,7 +25,7 @@ reflector = input('Input Relfector Settings: ')
 machine = Enigma(plugboard, reflector, rotor1, rotor2, rotor3, ring_setting, notch_setting)
 while True:
     print(machine.cipher(input('Enter Plaintext: ')))
-    if input('Cipher Other Text? Enter: yes/no').upper() == 'NO':
+    if input('Cipher new plaintext? (yes/no): ').upper() == 'NO':
         break
     else:
         continue

@@ -16,20 +16,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72ebaa1b-0d07-4334-8076-0cf87d68cc05" name="Default Changelist" comment="Changed rotor1.py to rotor.py &amp; Fixed Back Encryption">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Enigma.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reflector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list id="aa81f517-11b2-4563-b7b8-a11261e60e61" name="Uncommitted changes before Update at 18/07/20, 5:50 PM [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +42,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/jenilshah990/EnigmaPy.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1eqYsc0ZPNYjn2ZnmEUiAeEj5LX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,6 +68,9 @@
       <module name="Enigma" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -120,8 +128,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.Enigma" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
@@ -177,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595420517184</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed rotor1.py to rotor.py &amp; Fixed Back Encryption">
+      <created>1595421234535</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595421234535</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changed rotor1.py to rotor.py &amp; Fixed Back Encryption">
+      <created>1595421273005</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595421273005</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,11 +227,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changed rotor1.py to rotor.py &amp; Fixed Back Encryption" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595420998619">
+    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595421340448">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.810@0.23.1440.810" timestamp="1595417510670" />
-    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1595420998619" />
+    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1595421340448" />
     <state x="470" y="237" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595055739120">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
@@ -218,42 +240,50 @@
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state width="623" height="438" key="DebuggerActiveHint/0.23.1440.810@0.23.1440.810" timestamp="1595058641061" />
-    <state width="1419" height="207" key="GridCell.Tab.0.bottom" timestamp="1595421168052">
+    <state x="100" y="123" width="1240" height="610" key="DiffContextDialog" timestamp="1595421627057">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="100" y="123" width="1240" height="610" key="DiffContextDialog/0.23.1440.811@0.23.1440.811" timestamp="1595421627057" />
+    <state width="1419" height="259" key="GridCell.Tab.0.bottom" timestamp="1595421696265">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595419884170" />
-    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1595421168052" />
-    <state width="1419" height="207" key="GridCell.Tab.0.center" timestamp="1595421168051">
+    <state width="1419" height="259" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1595421696265" />
+    <state width="1419" height="259" key="GridCell.Tab.0.center" timestamp="1595421696264">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1595419884168" />
-    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1595421168051" />
-    <state width="1419" height="207" key="GridCell.Tab.0.left" timestamp="1595421168051">
+    <state width="1419" height="259" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1595421696264" />
+    <state width="1419" height="259" key="GridCell.Tab.0.left" timestamp="1595421696264">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1595419884166" />
-    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1595421168051" />
-    <state width="1419" height="207" key="GridCell.Tab.0.right" timestamp="1595421168052">
+    <state width="1419" height="259" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1595421696264" />
+    <state width="1419" height="259" key="GridCell.Tab.0.right" timestamp="1595421696265">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1595419884169" />
-    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1595421168052" />
-    <state width="1419" height="259" key="GridCell.Tab.1.bottom" timestamp="1595417289959">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state width="1419" height="259" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1595421696265" />
+    <state width="1419" height="259" key="GridCell.Tab.1.bottom" timestamp="1595421696266">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="259" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595417289959" />
-    <state width="1419" height="259" key="GridCell.Tab.1.center" timestamp="1595417289958">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state width="1419" height="259" key="GridCell.Tab.1.bottom/0.23.1440.811@0.23.1440.811" timestamp="1595421696266" />
+    <state width="1419" height="259" key="GridCell.Tab.1.center" timestamp="1595421696266">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="259" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1595417289958" />
-    <state width="1419" height="259" key="GridCell.Tab.1.left" timestamp="1595417289957">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state width="1419" height="259" key="GridCell.Tab.1.center/0.23.1440.811@0.23.1440.811" timestamp="1595421696266" />
+    <state width="1419" height="259" key="GridCell.Tab.1.left" timestamp="1595421696265">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="259" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1595417289957" />
-    <state width="1419" height="259" key="GridCell.Tab.1.right" timestamp="1595417289959">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state width="1419" height="259" key="GridCell.Tab.1.left/0.23.1440.811@0.23.1440.811" timestamp="1595421696265" />
+    <state width="1419" height="259" key="GridCell.Tab.1.right" timestamp="1595421696266">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1419" height="259" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1595417289959" />
+    <state width="1419" height="259" key="GridCell.Tab.1.right/0.23.1440.811@0.23.1440.811" timestamp="1595421696266" />
     <state x="229" y="67" key="SettingsEditor" timestamp="1595412960014">
       <screen x="0" y="23" width="1440" height="810" />
     </state>

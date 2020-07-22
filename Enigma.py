@@ -13,10 +13,10 @@ class Enigma:
         ciphertext = ''
         for c in plaintext:
             letter_index = ord(c.upper()) - ord('A')
-            letter_index = self.plug_board.plugboard_encrypt(letter_index)
+            letter_index = self.plug_board.encrypt(letter_index)
             letter_index = self.rotor.encrypt_forward(letter_index)
-            letter_index = self.reflector.plugboard_encrypt(letter_index)
+            letter_index = self.reflector.encrypt(letter_index)
             letter_index = self.rotor.encrpyt_backward(letter_index)
-            letter_index = self.plug_board.plugboard_encrypt(letter_index)
+            letter_index = self.plug_board.encrypt(letter_index)
             ciphertext += chr(letter_index + ord('A'))
         return ciphertext

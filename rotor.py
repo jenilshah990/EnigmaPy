@@ -8,18 +8,18 @@ ROTOR_IC = [3, 12, 19, 22, 18, 8, 11, 17, 20, 24, 16, 13, 10, 5, 4, 9, 2, 0, 25,
 ROTOR_IIC = [7, 16, 25, 6, 15, 9, 19, 12, 14, 1, 11, 13, 2, 8, 5, 3, 24, 0, 22, 21, 4, 20, 18, 17, 10, 23]
 ROTOR_IIIC = [20, 16, 13, 19, 11, 18, 25, 5, 12, 17, 4, 7, 3, 15, 23, 10, 8, 1, 21, 24, 6, 9, 2, 22, 14, 0]
 
-dict = {'ROTOR_I': ROTOR_I, 'ROTOR_II': ROTOR_II, 'ROTOR_III': ROTOR_III,
+rotorDict = {'ROTOR_I': ROTOR_I, 'ROTOR_II': ROTOR_II, 'ROTOR_III': ROTOR_III,
         'ROTOR_IC': ROTOR_IC, 'ROTOR_IIC': ROTOR_IIC, 'ROTOR_IIIC': ROTOR_IIIC}
 
 
 class rotor(object):
     def __init__(self, ring, notch, rotor1, rotor2, rotor3):
-        if rotor1 in dict:
-            self.rotor1 = dict[rotor1]
-        if rotor2 in dict:
-            self.rotor2 = dict[rotor2]
-        if rotor3 in dict:
-            self.rotor3 = dict[rotor3]
+        if rotor1 and rotor2 and rotor3 in rotorDict:
+            self.rotor1 = rotorDict[rotor1]
+            self.rotor2 = rotorDict[rotor2]
+            self.rotor3 = rotorDict[rotor3]
+        else:
+            print('Please choose valid rotors')
 
         # Offset Calculations
         self.off1 = ord(ring[0].upper()) - ord('A')  # off1 =  setting 1
